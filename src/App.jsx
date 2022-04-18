@@ -28,6 +28,7 @@ const myJSON = `{
 const App = () => {
   const [newJson, setNewJson] = useState(myJSON);
   const [newItems, setNewItems] = useState(newJson);
+  const [valueTextArea, setValueTextArea] = useState(newJson);
   const [error, setError] = useState(false);
 
   let typeItems = {};
@@ -40,19 +41,18 @@ const App = () => {
         return JSON.parse(newJson);
       } catch {
         setError(true);
+        return newJson;
       }
     };
 
     setNewItems(temp);
   }, [newJson]);
 
-
   const whatNumber = (num) => Number.isInteger(num) ? 'integer' : 'double';
 
   const objectIsNull = (obj) => (obj === null && Object.is(obj, null)) ? true : false;
 
   const objectIsArray = (obj) => (Array.isArray(obj)) ? true : false;
-
 
   // Function "stringIs" checks the string for the type hidden in it, if there is none, then it tries to recognize what kind of string it is.
   // Add check: 
@@ -76,7 +76,7 @@ const App = () => {
     }
 
     // 1. - add function here
-    
+
     const stringIsIP = (str) => {
       const regexExp = /(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 
@@ -221,51 +221,76 @@ const App = () => {
     }
   };
 
-  console.table(newItems);
-
   return (
     <div className="App">
       <div className="container">
         <section className="section">
           <h1 className="title">Guess the type</h1>
-          <input
-            type="text"
-            name="newJSON"
-            placeholder="Just insert your JSON"
-            className="input"
-            value={''}
-            onChange={(event) => {
-              setNewJson(event.target.value);
-            }}
-          />
+
+          <div className="field">
+            <label className="label">Just insert your JSON</label>
+            <div className="control">
+              <textarea
+                className="textarea"
+                placeholder="Textarea"
+                value={valueTextArea}
+                onChange={(event) => {
+                  setValueTextArea(event.target.value);
+                }}
+              >
+              </textarea>
+            </div>
+          </div>
+
+          <div className="field is-grouped">
+            <div className="control">
+              <button
+                className="button is-link"
+                onClick={() => setNewJson(valueTextArea)}
+              >
+                Submit
+              </button>
+            </div>
+            <div className="control">
+              <button
+                className="button is-link"
+                onClick={() => {
+                  setValueTextArea(myJSON);
+                  setNewJson(myJSON);
+                }}
+              >
+                Defoult JSON
+              </button>
+            </div>
+          </div>
         </section>
         <section className="section">
-        <div className="table-container">
-          <table className="table is-striped">
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value</th>
-                <th>Guess type is</th>
-              </tr>
-            </thead>
-            <tbody>
-              {!error ? (Object.keys(newItems).map((key, i) => (
-                <tr key={i}>
-                  <td>{key}</td>
-                  <td>{JSON.stringify(newItems[key])}</td>
-                  <td>
-                    {JSON.stringify(typeItems[key])}
-                  </td>
-                </tr>
-              ))) : (
+          <div className="table-container">
+            <table className="table is-striped">
+              <thead>
                 <tr>
-                  <td>Enter correct JSON</td>
+                  <th>Key</th>
+                  <th>Value</th>
+                  <th>Guess type is</th>
                 </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {!error ? (Object.keys(newItems).map((key, i) => (
+                  <tr key={i}>
+                    <td>{key}</td>
+                    <td>{JSON.stringify(newItems[key])}</td>
+                    <td>
+                      {JSON.stringify(typeItems[key])}
+                    </td>
+                  </tr>
+                ))) : (
+                  <tr>
+                    <td>Enter correct JSON</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
         </section>
       </div>
     </div>
