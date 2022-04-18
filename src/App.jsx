@@ -259,7 +259,7 @@ const App = () => {
                   setNewJson(myJSON);
                 }}
               >
-                Defoult JSON
+                Default JSON
               </button>
             </div>
           </div>
