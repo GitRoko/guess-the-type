@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/guess-the-type/static/css/main.073c9b0a.css",
-    "main.js": "/guess-the-type/static/js/main.a651a695.js",
-    "static/js/787.7eb359dc.chunk.js": "/guess-the-type/static/js/787.7eb359dc.chunk.js",
-    "static/media/logo.svg": "/guess-the-type/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/guess-the-type/static/css/main.105c300b.css",
+    "main.js": "/guess-the-type/static/js/main.51a59de6.js",
     "index.html": "/guess-the-type/index.html",
-    "main.073c9b0a.css.map": "/guess-the-type/static/css/main.073c9b0a.css.map",
-    "main.a651a695.js.map": "/guess-the-type/static/js/main.a651a695.js.map",
-    "787.7eb359dc.chunk.js.map": "/guess-the-type/static/js/787.7eb359dc.chunk.js.map"
+    "main.105c300b.css.map": "/guess-the-type/static/css/main.105c300b.css.map",
+    "main.51a59de6.js.map": "/guess-the-type/static/js/main.51a59de6.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.a651a695.js"
+    "static/css/main.105c300b.css",
+    "static/js/main.51a59de6.js"
   ]
 }
