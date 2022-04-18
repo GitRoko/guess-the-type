@@ -231,7 +231,7 @@ const App = () => {
           <input
             type="text"
             name="newJSON"
-            placeholder="Your JSON"
+            placeholder="Just insert your JSON"
             className="input"
             value={''}
             onChange={(event) => {
