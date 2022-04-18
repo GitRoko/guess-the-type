@@ -1,5 +1,47 @@
 # Guess the type
 
+My solution: [DEMO LINK](https://gitroko.github.io/guess-the-type/)
+
+Possible types which you have to guess:
+- array (list) // [1,2,3] || "[1,2,3]"
+- object (dictionary) // {}
+- boolean (binary) // true/false || "true"/"false"
+- integer (integer number) // 1 || "1"
+- double (floating-point digit) // 1.5 || "1.5"
+- zip (postal code) // usa format: "xxxxx-xxxx"
+- uuid (universal unique identifier) // uuid
+- phone (phone number) // ukraine mobile format:
+    - +380501234567
+    - +38-050-123-45-67
+    - 38050134567
+    - 80501234567
+    - 0501234567
+    - 050-123-45-67
+    - 050-12-34-567
+    - 050 123 45 67
+- date (date or datetime) // 10 dec 2022 || 10-12-2022 || 2022-12-10 || 2022/12/10
+- ip (internet protocol address)
+- url (uniform resource locator address)
+- email (email address) 
+- address (street address) // USA adress format: 
+    - 123 Fake Street, Fake City, FK 12345
+    - 123 Fake Street # 3, Fake City, FK 12345
+- text (long text) // more then 10 words
+- title (short text) // from 2 to 10 words
+- word (a word) // 1 word
+- undefined (everything else)
+
+
+To add a validation function in a file App.jsx:
+
+Function "stringIs" checks the string for the type hidden in it, if there is none, then it tries to recognize what kind of string it is.
+Add check: 
+  1. - add function stingIs<your type>(str) => return boolean;
+  2. - add condition:
+    if (stingIs<your type>(temp)) {
+      return '<your type name>';
+    }
+
 You have to create a web app to convert one json to another json file. Feel free to create your own sophisticated UI.
 Input JSON structure example:
 ```json

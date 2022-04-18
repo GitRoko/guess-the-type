@@ -53,6 +53,15 @@ const App = () => {
 
   const objectIsArray = (obj) => (Array.isArray(obj)) ? true : false;
 
+
+  // Function "stringIs" checks the string for the type hidden in it, if there is none, then it tries to recognize what kind of string it is.
+  // Add check: 
+  //  1. - add function stingIs<your type>(str) => return boolean;
+  //  2. - add condition:
+  //    if (stingIs<your type>(temp)) {
+  //      return '<your type name>';
+  //    }
+
   const stringIs = (string) => {
     let temp;
 
@@ -66,6 +75,8 @@ const App = () => {
       return parseType(temp);
     }
 
+    // 1. - add function here
+    
     const stringIsIP = (str) => {
       const regexExp = /(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 
@@ -136,6 +147,8 @@ const App = () => {
 
       return false;
     };
+
+    // 2. - Add condition here
 
     if (stringIsIP(temp)) {
       return 'ip (internet protocol address)';
