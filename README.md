@@ -37,13 +37,16 @@ Possible types which you have to guess:
     const stringIs = {
         <your_type>: {
         check: function (str): < (string): => this.result > { 
+                
+                < your_condition >
 
                 return this.result;
             }
         },
         result: '< your_type_title >',
         },
-
+        ...,
+    }
 # Task
 
 You have to create a web app to convert one json to another json file. Feel free to create your own sophisticated UI.
