@@ -36,14 +36,14 @@ Possible types which you have to guess:
     Add object to stringIs || objectIs || numberIs:
     const stringIs = {
         <your_type>: {
-        check: function (str): < (string): => this.result > { 
-                
-                < your_condition >
+            check: function (str): < (string): => this.result > { 
+                    
+                    < your_condition >
 
-                return this.result;
-            }
-        },
-        result: '< your_type_title >',
+                    return this.result;
+                }
+            },
+            result: '< your_type_title >',
         },
         ...,
     }
