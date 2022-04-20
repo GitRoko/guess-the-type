@@ -140,7 +140,7 @@ const App = () => {
                 {!error ? (Object.keys(parsedJson).map((key, i) => {
                   return (<tr key={i}>
                     <td>{key}</td>
-                    <td>{`${parsedJson[key]}`}</td>
+                    <td>{`${JSON.stringify(parsedJson[key])}`}</td>
                     <td>
                       {parsedTypes[key]}
                     </td>
