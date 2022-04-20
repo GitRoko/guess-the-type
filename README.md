@@ -32,15 +32,17 @@ Possible types which you have to guess:
 - undefined (everything else)
 
 
-To add a validation function in a file App.jsx:
+## To add a validation function in a file getTypeJson.js:
+    Add object to stringIs || objectIs || numberIs:
+    const stringIs = {
+        <your_type>: {
+        check: function (str): < (string): => this.result > { 
 
-Function "stringIs" checks the string for the type hidden in it, if there is none, then it tries to recognize what kind of string it is.
-Add check: 
-  1. - add function stingIs<your type>(str) => return boolean;
-  2. - add condition:
-    if (stingIs<your type>(temp)) {
-      return '<your type name>';
-    }
+                return this.result;
+            }
+        },
+        result: 'IP address ',
+        },
 
 # Task
 
