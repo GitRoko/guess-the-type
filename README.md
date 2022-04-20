@@ -33,7 +33,8 @@ Possible types which you have to guess:
 
 
 ## To add a validation function in a file getTypeJson.js:
-    Add object to stringIs || objectIs || numberIs:
+Add object to stringIs || objectIs || numberIs:
+```
     const stringIs = {
         <your_type>: {
             check: function (str): < (string): => this.result > { 
@@ -47,6 +48,7 @@ Possible types which you have to guess:
         },
         ...,
     }
+```
 # Task
 
 You have to create a web app to convert one json to another json file. Feel free to create your own sophisticated UI.
