@@ -11,7 +11,7 @@ export default function getTypeJson(json) {
           return this.result;
         }
       },
-      result: 'Integer',
+      result: 'Integer (integer number)',
     },
     float: {
       check(num) {
@@ -19,7 +19,7 @@ export default function getTypeJson(json) {
           return this.result;
         }
       },
-      result: 'Double',
+      result: 'Double (floating-point digit)',
     },
   };
 
@@ -38,7 +38,7 @@ export default function getTypeJson(json) {
           return this.result;
         }
       },
-      result: 'Array',
+      result: 'Array (list)',
     },
     object: {
       check(obj) {
@@ -46,7 +46,7 @@ export default function getTypeJson(json) {
           return this.result;
         }
       },
-      result: 'Object',
+      result: 'Object (dictionary)',
     },
   };
   
@@ -59,7 +59,7 @@ export default function getTypeJson(json) {
           return this.result;
         }
       },
-      result: 'IP address ',
+      result: 'IP (internet protocol address)',
     },
     url: {
       check: function (str) {
@@ -69,7 +69,7 @@ export default function getTypeJson(json) {
           return this.result;
         }
       },
-      result: 'URL address ',
+      result: 'URL (uniform resource locator address)',
     },
     email: {
       check: function (str) {
@@ -99,7 +99,7 @@ export default function getTypeJson(json) {
           return this.result;
         }
       },
-      result: 'UUID',
+      result: 'UUID (universal unique identifier)',
     },
     phone: {
       check: function (str) {
@@ -149,7 +149,7 @@ export default function getTypeJson(json) {
           return this.result;
         }
       },
-      result: 'Address  (street address )',
+      result: 'Address (street address)',
     },
     date: {
       check(str) {
@@ -159,7 +159,7 @@ export default function getTypeJson(json) {
           return this.result;
         }
       },
-      result: 'Date',
+      result: 'Date (date or datetime)',
     },
   };
 
@@ -175,7 +175,7 @@ export default function getTypeJson(json) {
   
     switch (typeof value) {
       case 'boolean':
-        return 'boolean';
+        return 'boolean (binary)';
   
       case 'number':
         return runChecker(numberIs, value);
