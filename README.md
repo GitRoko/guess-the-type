@@ -41,7 +41,7 @@ Possible types which you have to guess:
                 return this.result;
             }
         },
-        result: 'IP address ',
+        result: '< your_type_title >',
         },
 
 # Task
