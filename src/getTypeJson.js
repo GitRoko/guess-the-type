@@ -175,10 +175,10 @@ export default function getTypeJson(json) {
   
     switch (typeof value) {
       case 'boolean':
-        return 'boolean (binary)';
+        return 'boolean';
   
       case 'number':
-        return runChecker(numberIs, value);
+        return runChecker(numberIs, value) || 'undefined';
   
       case 'string':
         let newValue;
@@ -193,10 +193,10 @@ export default function getTypeJson(json) {
           return parseType(newValue);
         }
 
-        return runChecker(stringIs, newValue);
+        return runChecker(stringIs, newValue) || 'undefined';
   
       case 'object':
-        return runChecker(objectIs, value);
+        return runChecker(objectIs, value) || 'undefined';
   
       default:
         return 'undefined';
