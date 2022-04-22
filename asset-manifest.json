@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/guess-the-type/static/css/main.105c300b.css",
-    "main.js": "/guess-the-type/static/js/main.0cef4bec.js",
+    "main.js": "/guess-the-type/static/js/main.3f069d4b.js",
     "index.html": "/guess-the-type/index.html",
     "main.105c300b.css.map": "/guess-the-type/static/css/main.105c300b.css.map",
-    "main.0cef4bec.js.map": "/guess-the-type/static/js/main.0cef4bec.js.map"
+    "main.3f069d4b.js.map": "/guess-the-type/static/js/main.3f069d4b.js.map"
   },
   "entrypoints": [
     "static/css/main.105c300b.css",
-    "static/js/main.0cef4bec.js"
+    "static/js/main.3f069d4b.js"
   ]
 }
